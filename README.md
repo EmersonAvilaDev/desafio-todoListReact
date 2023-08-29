@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Título do Projeto
 
-Currently, two official plugins are available:
+Projeto de lista de tarefas 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Apêndice
+
+Permite visualisar,criar, excluir e editar a tarefa. Perfeito para organizar a rotina diária do usuário.
+Ao Clicar em cima do nome da tarefa, abrirá o modal de visualização da mesma, permitindo o usuário ver a descrição junto ao nome da tarefa.
+
+
+## Autores
+
+- [@EmersonAvilaDev](https://www.github.com/EmersonAvilaDev)
+
+
+## Stack utilizada
+
+**Front-end:** React, SASS, Javascript.
+
+
+
+
+## Demonstração
+
+Insira um gif ou um link de alguma demonstração
+
