@@ -1,0 +1,68 @@
+@use "../../sass/variables" as *;
+
+.view__modal__container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .view__modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        color: black;
+        width: 47.375rem;
+        height: 27.25rem;
+        border-radius: 0.625rem;
+        background: $white-color;
+
+        .viewTask__title {
+            color: #000;
+            font-family: Raleway;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        p {
+            color: #000;
+            font-family: Raleway;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;   
+        }
+    }
+
+    .view__modal_div_btn {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        button {
+            width: 150px;
+            height: 55px;
+            font-family: Raleway;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal__btn__cancel {
+    background-color: $base-blueColor;
+    color: $white-color;
+
+}
