@@ -1,7 +1,6 @@
 import "./index.scss";
 import CardTasks from "../CardTasks/CardTasks";
 import Divisor from "../../assets/divisor.svg";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import ModalCreatedTask from "../../view/ModalCreatedTask/ModalCreatedTask";
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./index.scss";
+import { toast } from "react-toastify";
 
 const ModalCreatedTask = ({ addTask, isOpen, onClose }) => {
   const [title, setTitle] = useState("");
@@ -12,10 +13,10 @@ const ModalCreatedTask = ({ addTask, isOpen, onClose }) => {
     setTitle("");
     setDescription("");
 
-    onClose()
+    onClose();
   };
 
-  if(!isOpen) return null;
+  if (!isOpen) return null;
 
   return (
     <div className="create__modal__container">
@@ -43,7 +44,9 @@ const ModalCreatedTask = ({ addTask, isOpen, onClose }) => {
           ></textarea>
 
           <div className="create__modal__div__btn">
-            <button onClick={onClose} className="modal__btn__cancel">Cancelar</button>
+            <button onClick={onClose} className="modal__btn__cancel">
+              Cancelar
+            </button>
             <button type="submit" className="modal__btn__add">
               Adicionar Tarefa
             </button>

@@ -2,6 +2,8 @@ import "./index.scss";
 import Header from "../../components/Header/Header";
 import TaskList from "../../components/TaskList/TaskList";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 const Home = ({ data }) => {
   const [tasks, setTasks] = useState(data);
@@ -18,14 +20,22 @@ const Home = ({ data }) => {
     ];
 
     setTasks(newTasks);
+    toast.success("Tarefa Adicionada", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const editTask = (id, newTitle, newDescription) => {
     const updatedTasks = tasks.map((task) =>
       task.id === id
-        ? { ...task, 
-          title: newTitle,
-          description: newDescription }
+        ? { ...task, title: newTitle, description: newDescription }
         : task
     );
 
@@ -37,22 +47,48 @@ const Home = ({ data }) => {
     const filteredTasks = newTasks.filter((task) =>
       task.id !== id ? task : null
     );
+
     setTasks(filteredTasks);
+    toast.success("Tarefa Deletada", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   return (
-    <div className="container">
-      <Header />
+    <>
+      <div className="container">
+        <Header />
 
-      <h1>Otimize seu tempo e se organize com o nosso Planejador Diário.</h1>
+        <h1>Otimize seu tempo e se organize com o nosso Planejador Diário.</h1>
 
-      <TaskList
-        data={tasks}
-        addTask={addTask}
-        editTask={editTask}
-        removeTask={removeTask}
+        <TaskList
+          data={tasks}
+          addTask={addTask}
+          editTask={editTask}
+          removeTask={removeTask}
+        />
+      </div>
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
       />
-    </div>
+    </>
   );
 };
 

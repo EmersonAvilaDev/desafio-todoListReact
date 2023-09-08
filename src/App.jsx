@@ -1,9 +1,9 @@
 import Home from "./view/Home/Home";
 
-function App({data}) {
+function App({ data }) {
   return (
     <>
-      <Home data={data}/>
+      <Home data={data} />
     </>
   );
 }
